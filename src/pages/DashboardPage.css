@@ -1,0 +1,167 @@
+.dashboard-page { background: var(--surface); padding-bottom: 5rem; }
+
+.dashboard-header {
+  padding-top: calc(var(--nav-height) + 2.5rem);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.dashboard-header h1 { margin: 0.6rem 0 0.4rem; }
+.dashboard-header p { color: var(--on-surface-variant); }
+
+/* KPI Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.kpi-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.kpi-icon { font-size: 1.8rem; margin-bottom: 0.25rem; }
+.kpi-value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.kpi-label { font-size: 0.82rem; color: var(--on-surface-variant); font-weight: 500; }
+.kpi-change { font-size: 0.72rem; align-self: center; }
+
+/* Main Grid */
+.dash-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.dash-card {
+  margin-bottom: 1.25rem;
+}
+.dash-card:last-child { margin-bottom: 0; }
+.dash-card h3 { margin-bottom: 1rem; font-size: 1rem; }
+.dash-side { display: flex; flex-direction: column; gap: 0; }
+
+/* Training Chart */
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+  margin-bottom: 1rem;
+}
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+.training-chart-wrapper {
+  height: 220px;
+  display: flex;
+  gap: 0.5rem;
+}
+.chart-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--on-surface-variant);
+  width: 30px;
+  flex-shrink: 0;
+  padding: 4px 0;
+  text-align: right;
+}
+.chart-area {
+  flex: 1;
+  position: relative;
+  background: var(--surface-container-low);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.chart-line-train,
+.chart-line-val {
+  position: absolute;
+  inset: 0;
+}
+.chart-x-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--on-surface-variant);
+  padding: 0.3rem 0 0 32px;
+}
+.chart-caption { font-size: 0.72rem; color: var(--on-surface-variant); text-align: center; margin-top: 0.25rem; }
+
+/* Model Info */
+.model-info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.model-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: var(--primary);
+  color: white;
+  border-radius: 4px;
+  padding: 0.2rem 0.45rem;
+  min-width: 44px;
+  text-align: center;
+}
+.model-name { font-weight: 600; font-size: 0.95rem; color: var(--on-surface); }
+
+/* Breed Accuracy */
+.breed-acc-list { display: flex; flex-direction: column; gap: 0.65rem; }
+.breed-acc-item { display: grid; grid-template-columns: 80px 1fr 42px; gap: 0.5rem; align-items: center; }
+.breed-acc-name { font-size: 0.85rem; font-weight: 500; color: var(--on-surface-variant); }
+.breed-acc-bar { flex: 1; height: 6px; }
+.breed-acc-pct { font-size: 0.78rem; font-weight: 600; color: var(--primary); text-align: right; }
+
+/* Confusion Matrix */
+.cm-caption { font-size: 0.8rem; color: var(--on-surface-variant); margin-bottom: 1rem; }
+.cm-wrapper { overflow-x: auto; }
+.cm-table { border-collapse: collapse; width: 100%; min-width: 400px; }
+.cm-th-corner {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.72rem;
+  color: var(--on-surface-variant);
+  font-weight: 500;
+  background: var(--surface-container-low);
+  border-radius: var(--radius-sm) 0 0 0;
+}
+.cm-th {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--on-surface);
+  background: var(--surface-container-low);
+  text-align: center;
+}
+.cm-row-label {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--on-surface);
+  background: var(--surface-container-low);
+  text-align: left;
+}
+.cm-cell {
+  padding: 0.55rem 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: opacity var(--transition-fast);
+}
+
+@media (max-width: 1024px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .dash-main-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+}

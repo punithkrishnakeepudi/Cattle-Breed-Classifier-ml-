@@ -1,0 +1,128 @@
+.breeds-page { background: var(--surface); padding-bottom: 4rem; }
+
+.breeds-header {
+  padding-top: calc(var(--nav-height) + 2.5rem);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.breeds-header h1 { margin: 0.6rem 0 0.4rem; }
+.breeds-header p { color: var(--on-surface-variant); }
+
+/* Search */
+.breeds-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: var(--radius-full);
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-icon { font-size: 1.1rem; }
+.breeds-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--on-surface);
+  flex: 1;
+}
+.breeds-search-input::placeholder { color: var(--on-surface-variant); }
+
+/* Layout */
+.breeds-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Grid */
+.breeds-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.breed-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: left;
+  cursor: pointer;
+  padding: 1.25rem;
+  border: 2px solid transparent;
+  transition: all var(--transition-smooth);
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.breed-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.breed-card--active {
+  border-color: var(--primary-container);
+  background: rgba(109, 250, 210, 0.15) !important;
+  box-shadow: var(--shadow-glow);
+}
+
+.breed-card-emoji { font-size: 2.2rem; }
+.breed-card-info { flex: 1; }
+.breed-card-name { font-size: 1.05rem; font-weight: 700; color: var(--on-surface); margin-bottom: 0.2rem; }
+.breed-card-origin { font-size: 0.8rem; color: var(--on-surface-variant); margin-bottom: 0.5rem; }
+.breed-card-traits { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+.badge-sm { font-size: 0.7rem; padding: 0.2rem 0.55rem; }
+
+.breeds-empty { color: var(--on-surface-variant); font-size: 0.9rem; padding: 2rem; grid-column: 1/-1; text-align: center; }
+
+/* Detail Panel */
+.breed-detail { padding: 2rem; position: sticky; top: calc(var(--nav-height) + 1rem); }
+
+.breed-detail-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+.breed-detail-emoji { font-size: 3rem; }
+.breed-detail-name { font-size: 1.75rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; margin-bottom: 0.2rem; }
+.breed-detail-origin { font-size: 0.85rem; color: var(--on-surface-variant); margin-bottom: 0.4rem; }
+
+.breed-detail-desc {
+  font-size: 0.9rem;
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.breed-detail-section { margin-bottom: 1.5rem; }
+.breed-detail-section h4 { margin-bottom: 0.75rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--on-surface-variant); }
+
+.info-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.info-pair { background: var(--surface-container-low); border-radius: var(--radius-sm); padding: 0.6rem; }
+.info-pair dt { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--on-surface-variant); }
+.info-pair dd { font-size: 0.88rem; color: var(--on-surface); margin: 0; }
+
+.milk-stat { display: flex; align-items: baseline; gap: 0.5rem; background: var(--surface-container-low); border-radius: var(--radius-md); padding: 0.85rem 1rem; }
+.milk-value { font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; color: var(--primary); }
+.milk-label { font-size: 0.8rem; color: var(--on-surface-variant); }
+
+.info-traits { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+@media (max-width: 1024px) {
+  .breeds-layout { grid-template-columns: 1fr; }
+  .breed-detail { position: static; }
+  .breeds-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .breeds-grid { grid-template-columns: repeat(2, 1fr); }
+}

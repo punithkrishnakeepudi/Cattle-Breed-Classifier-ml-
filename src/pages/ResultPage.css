@@ -1,0 +1,142 @@
+.result-page { background: var(--surface); padding-bottom: 4rem; }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+  padding-top: calc(var(--nav-height) + 1.5rem);
+  margin-bottom: 1rem;
+}
+.breadcrumb a { color: var(--primary); font-weight: 500; }
+.breadcrumb span:not(a) { color: var(--on-surface-variant); }
+
+.result-header { margin-bottom: 2rem; }
+.result-header h1 { margin-top: 0.5rem; }
+
+.result-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.result-card {
+  margin-bottom: 1.25rem;
+}
+.result-card h3 { margin-bottom: 1.25rem; font-size: 1rem; }
+
+/* Detection */
+.detection-img-wrapper {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface-container-low);
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detection-img { width: 100%; height: auto; display: block; }
+.detection-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 3rem;
+  opacity: 0.6;
+}
+.detection-placeholder span { font-size: 4rem; }
+.yolo-badge {
+  position: absolute;
+  top: 0.75rem; left: 0.75rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.yolo-box {
+  position: absolute;
+  inset: 0.5rem;
+  border: 2.5px solid var(--primary-container);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Grad-CAM */
+.gradcam-wrapper { display: flex; flex-direction: column; gap: 1rem; }
+.gradcam-overlay {
+  min-height: 200px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(0,184,148,0.15) 0%, rgba(255,100,60,0.1) 60%, rgba(255,50,50,0.08) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.gradcam-emoji { font-size: 3rem; }
+.gradcam-text { color: var(--on-surface-variant); font-size: 0.9rem; }
+.gradcam-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--on-surface-variant);
+  background: var(--surface-container-low);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+/* Top Prediction */
+.breed-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.confidence-score-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.confidence-pct {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--on-secondary-container);
+}
+
+/* Breakdown */
+.confidence-list { display: flex; flex-direction: column; gap: 0.85rem; }
+.confidence-item {}
+.confidence-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+.confidence-label { font-size: 0.88rem; font-weight: 500; color: var(--on-surface-variant); }
+.confidence-label--main { color: var(--on-surface); font-weight: 700; }
+
+/* Info */
+.info-list { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
+.info-pair { display: flex; flex-direction: column; gap: 0.15rem; background: var(--surface-container-low); border-radius: var(--radius-sm); padding: 0.65rem; }
+.info-pair dt { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--on-surface-variant); }
+.info-pair dd { font-size: 0.9rem; color: var(--on-surface); margin: 0; }
+.info-traits { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.75rem; }
+
+/* Actions */
+.result-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
+.result-actions .btn { flex: 1; justify-content: center; min-width: 140px; }
+
+@media (max-width: 960px) {
+  .result-layout { grid-template-columns: 1fr; }
+}
