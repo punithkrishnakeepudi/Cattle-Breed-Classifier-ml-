@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "amritmahal",
+    "name": "Amritmahal",
+    "origin": "Karnataka",
+    "state": "Karnataka",
+    "traits": [
+      "Draught Power",
+      "Endurance",
+      "Speed"
+    ],
+    "status": "Stable",
+    "milkYield": "Low (Draught breed)",
+    "weight": "400 \u2013 500 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Grey to dark grey",
+    "desc": "Strong draught breed from Karnataka; not mainly selected for milk. Fast trotting and capable of incredible endurance.",
+    "image": "/breeds/Amritmahal.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "bargur",
+    "name": "Bargur",
+    "origin": "Tamil Nadu",
+    "state": "Tamil Nadu",
+    "traits": [
+      "Hill Cattle",
+      "Endurance",
+      "Hardiness"
+    ],
+    "status": "Stable",
+    "milkYield": "Low",
+    "weight": "300 \u2013 350 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Red and white patches",
+    "desc": "Hill cattle used for work in Tamil Nadu; low milk, valued for endurance and hardiness in rough terrain.",
+    "image": "/breeds/Bargur.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "dangi",
+    "name": "Dangi",
+    "origin": "Maharashtra",
+    "state": "Maharashtra, Gujarat",
+    "traits": [
+      "Rainfall Resistant",
+      "Hardy",
+      "Field Utility"
+    ],
+    "status": "Stable",
+    "milkYield": "Moderate",
+    "weight": "350 \u2013 450 kg",
+    "height": "125 \u2013 135 cm",
+    "coat": "Black and white patches",
+    "desc": "Hardy in heavy rainfall zones; moderate milk with field utility. Known for its distinct black and white coat.",
+    "image": "/breeds/Dangi.jpg",
+    "species": "Cattle",
+    "mainType": "Draught / Dual"
+  },
+  {
+    "id": "deoni",
+    "name": "Deoni",
+    "origin": "Maharashtra",
+    "state": "Maharashtra, Karnataka",
+    "traits": [
+      "Dual Purpose",
+      "Docile",
+      "Draft Power"
+    ],
+    "status": "Stable",
+    "milkYield": "636 \u2013 1230 kg",
+    "weight": "400 \u2013 450 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Black and white spotted",
+    "desc": "Popular dual-purpose breed of central India. Used for both milk and work, known for its docile nature.",
+    "image": "/breeds/Deoni.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "gaolao",
+    "name": "Gaolao",
+    "origin": "Maharashtra",
+    "state": "Maharashtra, Madhya Pradesh",
+    "traits": [
+      "White Coat",
+      "Dual Purpose",
+      "Agile"
+    ],
+    "status": "Stable",
+    "milkYield": "Moderate",
+    "weight": "350 \u2013 450 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Pure White",
+    "desc": "Known for its pure white coat and fair milk with draught utility. Agile and well-suited for agriculture.",
+    "image": "/breeds/gaolao.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "gir",
+    "name": "Gir",
+    "origin": "Gujarat",
+    "state": "Gujarat",
+    "traits": [
+      "High Milk Yield",
+      "Heat Tolerant",
+      "A2 Milk"
+    ],
+    "status": "Stable",
+    "milkYield": "1200 \u2013 1800 kg",
+    "weight": "400 \u2013 475 kg",
+    "height": "135 \u2013 145 cm",
+    "coat": "Reddish-brown with white patches",
+    "desc": "Major dairy breed from Gujarat. Known worldwide for hardiness and high A2 milk production.",
+    "image": "/breeds/Gir.jpg",
+    "species": "Cattle",
+    "mainType": "Milch"
+  },
+  {
+    "id": "hallikar",
+    "name": "Hallikar",
+    "origin": "Karnataka",
+    "state": "Karnataka",
+    "traits": [
+      "Fast Trotting",
+      "Exceptional Draught",
+      "Sprint"
+    ],
+    "status": "Stable",
+    "milkYield": "Low",
+    "weight": "350 \u2013 450 kg",
+    "height": "130 \u2013 145 cm",
+    "coat": "Grey to dark grey",
+    "desc": "Premier draught breed of Karnataka. Fast trotting draught breed; valued for speed and endurance.",
+    "image": "/breeds/Hallikar.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "hariana",
+    "name": "Hariana",
+    "origin": "Haryana",
+    "state": "Haryana, Uttar Pradesh, Rajasthan",
+    "traits": [
+      "Dual Purpose",
+      "Powerful Bullocks",
+      "Docile"
+    ],
+    "status": "Stable",
+    "milkYield": "Moderate",
+    "weight": "350 \u2013 500 kg",
+    "height": "130 \u2013 150 cm",
+    "coat": "White/Light Grey",
+    "desc": "Important dual-purpose breed of North India. Moderate milk and strong bullocks for cultivation.",
+    "image": "/breeds/Hariana.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "kangayam",
+    "name": "Kangayam",
+    "origin": "Tamil Nadu",
+    "state": "Tamil Nadu",
+    "traits": [
+      "Strength",
+      "Hardy",
+      "Compact Build"
+    ],
+    "status": "Stable",
+    "milkYield": "Limited",
+    "weight": "400 \u2013 550 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Grey with dark areas",
+    "desc": "Compact, hardy draught breed from Tamil Nadu; limited milk output. Used extensively in agriculture.",
+    "image": "/breeds/Kangayam.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "kankrej",
+    "name": "Kankrej",
+    "origin": "Gujarat",
+    "state": "Gujarat, Rajasthan",
+    "traits": [
+      "Fast Gait",
+      "Lyre Horns",
+      "Powerful"
+    ],
+    "status": "Stable",
+    "milkYield": "1500 \u2013 1800 kg",
+    "weight": "420 \u2013 560 kg",
+    "height": "145 \u2013 155 cm",
+    "coat": "Silver-grey",
+    "desc": "Good draught breed with moderate milk production. Famous for its peculiar gait 'Sawai Chal'.",
+    "image": "/breeds/Kankrej.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "kenkatha",
+    "name": "Kenkatha",
+    "origin": "Uttar Pradesh",
+    "state": "Uttar Pradesh, Madhya Pradesh",
+    "traits": [
+      "Small Hardy",
+      "Work Oriented",
+      "Tough"
+    ],
+    "status": "Stable",
+    "milkYield": "Low",
+    "weight": "300 \u2013 350 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Greyish/White",
+    "desc": "Small hardy working cattle from UP and MP; low milk. Well-adapted to poor grazing conditions.",
+    "image": "/breeds/Kenkatha.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "khariar",
+    "name": "Khariar",
+    "origin": "Odisha",
+    "state": "Odisha",
+    "traits": [
+      "Regional Utility",
+      "Dual Role",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "Average local",
+    "weight": "250 \u2013 350 kg",
+    "height": "115 \u2013 125 cm",
+    "coat": "Varies (Brown/Grey)",
+    "desc": "Regional breed of Odisha used for both milk and work. Well-integrated into local farming systems.",
+    "image": "/breeds/Khariar.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "krishna_valley",
+    "name": "Krishna Valley",
+    "origin": "Karnataka",
+    "state": "Karnataka, Maharashtra",
+    "traits": [
+      "Large Framed",
+      "Draught Power",
+      "Heavy Work"
+    ],
+    "status": "Stable",
+    "milkYield": "Low",
+    "weight": "500 \u2013 650 kg",
+    "height": "150 \u2013 160 cm",
+    "coat": "White to grey",
+    "desc": "Large framed draught breed from Krishna river valley. Not a major dairy animal, but powerful in fields.",
+    "image": "/breeds/Krishna_Valley.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "malvi",
+    "name": "Malvi",
+    "origin": "Madhya Pradesh",
+    "state": "Madhya Pradesh",
+    "traits": [
+      "Agriculture Power",
+      "Carting",
+      "Sturdy"
+    ],
+    "status": "Stable",
+    "milkYield": "Low to moderate",
+    "weight": "350 \u2013 450 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "White to Grey",
+    "desc": "Useful for agriculture and carting in the Malwa region. Sturdy cattle with good work potential.",
+    "image": "/breeds/malvi.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "mewati",
+    "name": "Mewati",
+    "origin": "Rajasthan",
+    "state": "Rajasthan, Uttar Pradesh",
+    "traits": [
+      "White Coat",
+      "Moderate Milk",
+      "Farm Work"
+    ],
+    "status": "Stable",
+    "milkYield": "800 \u2013 1200 kg",
+    "weight": "350 \u2013 450 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "White with greyish head",
+    "desc": "White cattle with moderate milk and farm work value. Also known as Kosi in some regions.",
+    "image": "/breeds/Mewati.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "nagori",
+    "name": "Nagori",
+    "origin": "Rajasthan",
+    "state": "Rajasthan",
+    "traits": [
+      "Carting Speed",
+      "Draught Power",
+      "Agile"
+    ],
+    "status": "Stable",
+    "milkYield": "Low",
+    "weight": "350 \u2013 450 kg",
+    "height": "135 \u2013 145 cm",
+    "coat": "White/Light Grey",
+    "desc": "Famous for carting speed and draught power. Well-known for agility and endurance in dry areas.",
+    "image": "/breeds/nagori.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "nimari",
+    "name": "Nimari",
+    "origin": "Madhya Pradesh",
+    "state": "Madhya Pradesh",
+    "traits": [
+      "Moderate Utility",
+      "Local Adaptation",
+      "Agile"
+    ],
+    "status": "Stable",
+    "milkYield": "600 \u2013 900 kg",
+    "weight": "350 \u2013 450 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Red with white patches",
+    "desc": "Moderate utility breed with local adaptation. Shows influence of Gir and Khillari breeds.",
+    "image": "/breeds/Nimari.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "ongole",
+    "name": "Ongole",
+    "origin": "Andhra Pradesh",
+    "state": "Andhra Pradesh",
+    "traits": [
+      "Heavy Draught",
+      "Dual Purpose",
+      "Disease Resistance"
+    ],
+    "status": "Stable",
+    "milkYield": "Approx. 1000 kg",
+    "weight": "550 \u2013 700 kg",
+    "height": "155 \u2013 165 cm",
+    "coat": "White to grey",
+    "desc": "Approx. 1000 kg milk per lactation; strong heavy draught animals. Famous globally for heat tolerance.",
+    "image": "/breeds/Ongole.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "rathi",
+    "name": "Rathi",
+    "origin": "Rajasthan",
+    "state": "Rajasthan",
+    "traits": [
+      "Milch Utility",
+      "Arid Hardy",
+      "Docile"
+    ],
+    "status": "Stable",
+    "milkYield": "1500 \u2013 2500 kg",
+    "weight": "300 \u2013 400 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Brown with white patches",
+    "desc": "Important dairy breed from arid regions of Rajasthan. Known for moderate to good milk production.",
+    "image": "/breeds/Rathi.jpg",
+    "species": "Cattle",
+    "mainType": "Milch / Dual"
+  },
+  {
+    "id": "red_sindhi",
+    "name": "Red Sindhi",
+    "origin": "Sindh (now Pakistan/India)",
+    "state": "India herds",
+    "traits": [
+      "Dairy Specialist",
+      "Heat Tolerant",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "1250 \u2013 1800 kg",
+    "weight": "350 \u2013 450 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Dark Red",
+    "desc": "Recognized dairy breed with high milk potential. Highly resistant to tropical diseases and heat.",
+    "image": "/breeds/Red_Sindhi.jpg",
+    "species": "Cattle",
+    "mainType": "Milch"
+  },
+  {
+    "id": "sahiwal",
+    "name": "Sahiwal",
+    "origin": "Punjab",
+    "state": "Punjab",
+    "traits": [
+      "Highest Milk Yield",
+      "Calm Temperament",
+      "A2 Milk"
+    ],
+    "status": "Stable",
+    "milkYield": "1400 \u2013 2500 kg",
+    "weight": "350 \u2013 450 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Reddish-dun",
+    "desc": "One of the best indigenous dairy breeds of India. Capable of high yields even under mediocre management.",
+    "image": "/breeds/Sahiwal.jpg",
+    "species": "Cattle",
+    "mainType": "Milch"
+  },
+  {
+    "id": "siri",
+    "name": "Siri",
+    "origin": "Himalayan region",
+    "state": "Sikkim, West Bengal",
+    "traits": [
+      "Hill Adaptation",
+      "Strong Build",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "Moderate",
+    "weight": "300 \u2013 400 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Black/Brown with white patches",
+    "desc": "Used for milk and work in hill areas. Very hardy and well-adapted to high altitude terrain.",
+    "image": "/breeds/siri.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "tharparkar",
+    "name": "Tharparkar",
+    "origin": "Thar Desert",
+    "state": "Rajasthan",
+    "traits": [
+      "Excellent Dairy",
+      "Arid Tolerance",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "1800 \u2013 2600 kg",
+    "weight": "350 \u2013 450 kg",
+    "height": "125 \u2013 140 cm",
+    "coat": "White to light grey",
+    "desc": "Approx. 1800-2600 kg milk per lactation under good management. Thrives in severe desert conditions.",
+    "image": "/breeds/Tharparkar.jpg",
+    "species": "Cattle",
+    "mainType": "Milch / Dual"
+  },
+  {
+    "id": "kherigarh",
+    "name": "Kherigarh",
+    "origin": "Uttar Pradesh",
+    "state": "Uttar Pradesh",
+    "traits": [
+      "Light Draught",
+      "Agile",
+      "Active"
+    ],
+    "status": "Stable",
+    "milkYield": "Low",
+    "weight": "300 \u2013 350 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "White",
+    "desc": "Light draught breed from UP. Mostly used for agricultural operations in the Terai region.",
+    "image": "/breeds/kherigarh.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "pulikulam",
+    "name": "Pulikulam",
+    "origin": "Tamil Nadu",
+    "state": "Tamil Nadu",
+    "traits": [
+      "Herding",
+      "Jallikattu",
+      "Agile"
+    ],
+    "status": "Stable",
+    "milkYield": "Low",
+    "weight": "300 \u2013 400 kg",
+    "height": "120 \u2013 135 cm",
+    "coat": "Grey/Dark Grey",
+    "desc": "Active local breed used for herding and traditional events. Valued for its endurance in hilly terrain.",
+    "image": "/breeds/Pulikulam.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "umblachery",
+    "name": "Umblachery",
+    "origin": "Tamil Nadu",
+    "state": "Tamil Nadu",
+    "traits": [
+      "Delta Adaptation",
+      "Draught",
+      "Sturdy"
+    ],
+    "status": "Stable",
+    "milkYield": "Limited",
+    "weight": "350 \u2013 450 kg",
+    "height": "125 \u2013 135 cm",
+    "coat": "Grey with white markings",
+    "desc": "Draft-oriented delta breed from the Thanjavur region. Well-adapted to marshy and water-logged fields.",
+    "image": "/breeds/Umblachery.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "punganur",
+    "name": "Punganur",
+    "origin": "Andhra Pradesh",
+    "state": "Andhra Pradesh",
+    "traits": [
+      "Dwarf Cattle",
+      "Docile",
+      "High Fat Milk"
+    ],
+    "status": "Endangered",
+    "milkYield": "3 \u2013 5 kg/day",
+    "weight": "150 \u2013 200 kg",
+    "height": "70 \u2013 90 cm",
+    "coat": "White/Grey/Red/Brown",
+    "desc": "Smallest humped cattle breed. Locally valued for milk rich in butterfat despite its small size.",
+    "image": "/breeds/Punganur.jpg",
+    "species": "Cattle",
+    "mainType": "Milch"
+  },
+  {
+    "id": "vechur",
+    "name": "Vechur",
+    "origin": "Kerala",
+    "state": "Kerala",
+    "traits": [
+      "Smallest Breed",
+      "Medicinal Milk",
+      "Hardy"
+    ],
+    "status": "Endangered",
+    "milkYield": "500 \u2013 800 kg",
+    "weight": "100 \u2013 150 kg",
+    "height": "80 \u2013 90 cm",
+    "coat": "Light grey/Red/Black",
+    "desc": "Worlds smallest indigenous cattle breed. Known for modest but highly valued medicinal milk.",
+    "image": "/breeds/Vechur.jpg",
+    "species": "Cattle",
+    "mainType": "Milch"
+  },
+  {
+    "id": "motu",
+    "name": "Motu",
+    "origin": "Odisha",
+    "state": "Odisha",
+    "traits": [
+      "Indigenous",
+      "Work Local",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "Average local",
+    "weight": "250 \u2013 300 kg",
+    "height": "110 \u2013 120 cm",
+    "coat": "Brown/Black",
+    "desc": "Draught / dual breed of Odisha. Well-adapted to poor nutrition and hot-humid climates.",
+    "image": "/breeds/motu.jpg",
+    "species": "Cattle",
+    "mainType": "Draught / Dual"
+  },
+  {
+    "id": "kosali",
+    "name": "Kosali",
+    "origin": "Chhattisgarh",
+    "state": "Chhattisgarh",
+    "traits": [
+      "Local Adaptation",
+      "Agile",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "Moderate local",
+    "weight": "250 \u2013 350 kg",
+    "height": "115 \u2013 125 cm",
+    "coat": "Varies",
+    "desc": "Indigenous breed of Chhattisgarh. Small and active, used for both milk and field operations.",
+    "image": "/breeds/Kosali.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "ponwar",
+    "name": "Ponwar",
+    "origin": "Uttar Pradesh",
+    "state": "Uttar Pradesh",
+    "traits": [
+      "Alert",
+      "Fast",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "Low",
+    "weight": "300 \u2013 350 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Black & White (Spotted)",
+    "desc": "Alert and hardy breed from UP, mainly used for draught. Known for its distinct black and white coat color.",
+    "image": "/breeds/ponwar.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "gangatiri",
+    "name": "Gangatiri",
+    "origin": "Eastern Uttar Pradesh",
+    "state": "Uttar Pradesh, Bihar",
+    "traits": [
+      "Dual Purpose",
+      "River Variant",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "900 \u2013 1200 kg",
+    "weight": "350 \u2013 450 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "White/Light Grey",
+    "desc": "Moderate milk with agricultural utility. Found along the banks of the Ganges in UP and Bihar.",
+    "image": null,
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "badri",
+    "name": "Badri",
+    "origin": "Uttarakhand",
+    "state": "Uttarakhand",
+    "traits": [
+      "Hill Adaptation",
+      "High Altitude",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "500 \u2013 800 kg",
+    "weight": "200 \u2013 300 kg",
+    "height": "110 \u2013 120 cm",
+    "coat": "Black/Reddish-Brown",
+    "desc": "Hill cattle adapted to mountain terrain. Known for local utility and pure organic milk.",
+    "image": "/breeds/badri.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "belahi",
+    "name": "Belahi",
+    "origin": "Haryana (Floodplains)",
+    "state": "Haryana, Himachal Pradesh",
+    "traits": [
+      "Floodplain Hardy",
+      "Dairy",
+      "Large"
+    ],
+    "status": "Stable",
+    "milkYield": "1000 \u2013 1400 kg",
+    "weight": "350 \u2013 450 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Reddish Brown",
+    "desc": "Dairy-oriented local breed from riverine areas. Very hardy and capable of surviving in marshy terrain.",
+    "image": null,
+    "species": "Cattle",
+    "mainType": "Milch / Dual"
+  },
+  {
+    "id": "binjharpuri",
+    "name": "Binjharpuri",
+    "origin": "Odisha",
+    "state": "Odisha",
+    "traits": [
+      "Utility",
+      "Regional Hardy",
+      "Dual Role"
+    ],
+    "status": "Stable",
+    "milkYield": "Average local",
+    "weight": "300 \u2013 400 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "White/Brownish",
+    "desc": "Good local utility breed from Odisha, used for both milk and intensive agricultural work.",
+    "image": null,
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "ghumsari",
+    "name": "Ghumsari",
+    "origin": "Odisha",
+    "state": "Odisha",
+    "traits": [
+      "Indigenous",
+      "Local Utility",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "Local average",
+    "weight": "300 \u2013 350 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "White/Grey",
+    "desc": "Indigenous breed adapted to local management systems in southern Odisha.",
+    "image": "/breeds/ghumsari.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "lal_kandhari",
+    "name": "Lal Kandhari",
+    "origin": "Maharashtra",
+    "state": "Maharashtra",
+    "traits": [
+      "Deep Red",
+      "Work Heavy",
+      "Draught Power"
+    ],
+    "status": "Stable",
+    "milkYield": "Moderate",
+    "weight": "400 \u2013 500 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Deep Red",
+    "desc": "Deep red animals; valued for both milk and draught power in the Marathwada region.",
+    "image": null,
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "shweta_kapila",
+    "name": "Shweta Kapila",
+    "origin": "Goa",
+    "state": "Goa",
+    "traits": [
+      "Coastal Hardy",
+      "Milch Utility",
+      "Rare"
+    ],
+    "status": "Stable",
+    "milkYield": "800 \u2013 1000 kg",
+    "weight": "300 \u2013 400 kg",
+    "height": "115 \u2013 125 cm",
+    "coat": "Pure White",
+    "desc": "Newly registered indigenous breed from Goa. Small-sized with good local milk productivity.",
+    "image": "/breeds/Shweta Kapila.jpg",
+    "species": "Cattle",
+    "mainType": "Milch / Dual"
+  },
+  {
+    "id": "thutho",
+    "name": "Thutho",
+    "origin": "Nagaland",
+    "state": "Nagaland",
+    "traits": [
+      "Hill Hardy",
+      "Sturdy",
+      "Mountain Build"
+    ],
+    "status": "Stable",
+    "milkYield": "Local local",
+    "weight": "300 \u2013 400 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Black/Brown",
+    "desc": "Newly registered local breed from Nagaland. Adapted to the North East hilly climate and terrain.",
+    "image": "/breeds/thutho.jpg",
+    "species": "Cattle",
+    "mainType": "Draught"
+  },
+  {
+    "id": "himachali_pahari",
+    "name": "Himachali Pahari",
+    "origin": "Himachal Pradesh",
+    "state": "Himachal Pradesh",
+    "traits": [
+      "Hill Utility",
+      "High Altitude",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "500 \u2013 800 kg",
+    "weight": "250 \u2013 350 kg",
+    "height": "110 \u2013 120 cm",
+    "coat": "Varies",
+    "desc": "Newly registered hill breed from Himachal. Used for local milk production and light field work.",
+    "image": "/breeds/Himachali Pahari.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "purnea",
+    "name": "Purnea",
+    "origin": "Bihar",
+    "state": "Bihar",
+    "traits": [
+      "Floodplain Adaptation",
+      "Dual Utility",
+      "Hardy"
+    ],
+    "status": "Stable",
+    "milkYield": "Moderate",
+    "weight": "300 \u2013 400 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Grey/White",
+    "desc": "Newly registered local breed from Purnea region of Bihar. Known for its hardiness in floodplain areas.",
+    "image": "/breeds/Purnea.jpg",
+    "species": "Cattle",
+    "mainType": "Dual purpose"
+  },
+  {
+    "id": "banni",
+    "name": "Banni",
+    "origin": "Gujarat (Kutch)",
+    "state": "Gujarat",
+    "traits": [
+      "Buffalo",
+      "Night Grazing",
+      "High Milk"
+    ],
+    "status": "Stable",
+    "milkYield": "1100 \u2013 1600 kg",
+    "weight": "500 \u2013 600 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Black",
+    "desc": "Highly productive buffalo breed from Kutch. Capable of night grazing and high milk yield under extensive systems.",
+    "image": null,
+    "species": "Buffalo",
+    "mainType": "Milch"
+  },
+  {
+    "id": "bhadawari",
+    "name": "Bhadawari",
+    "origin": "Uttar Pradesh",
+    "state": "Uttar Pradesh, Madhya Pradesh",
+    "traits": [
+      "High Fat Milk",
+      "Hardy",
+      "Buffalo"
+    ],
+    "status": "Stable",
+    "milkYield": "800 \u2013 1200 kg",
+    "weight": "400 \u2013 500 kg",
+    "height": "125 \u2013 135 cm",
+    "coat": "Coppery Black",
+    "desc": "Buffalo breed with a distinct coppery coat. Valued for extremely high milk fat content (up to 13%).",
+    "image": null,
+    "species": "Buffalo",
+    "mainType": "Dual / Milk"
+  },
+  {
+    "id": "jaffrabadi",
+    "name": "Jaffrabadi",
+    "origin": "Gujarat",
+    "state": "Gujarat",
+    "traits": [
+      "Heavy Buffalo",
+      "Massive Build",
+      "Milch"
+    ],
+    "status": "Stable",
+    "milkYield": "2000 \u2013 2500 kg",
+    "weight": "700 \u2013 1000 kg",
+    "height": "145 \u2013 155 cm",
+    "coat": "Coal Black",
+    "desc": "The heaviest and largest Indian buffalo breed. Known for its massive build and high milk productivity.",
+    "image": null,
+    "species": "Buffalo",
+    "mainType": "Milch"
+  },
+  {
+    "id": "mehsana",
+    "name": "Mehsana",
+    "origin": "Gujarat",
+    "state": "Gujarat",
+    "traits": [
+      "Dairy Specialist",
+      "High Persistency",
+      "Buffalo"
+    ],
+    "status": "Stable",
+    "milkYield": "1800 \u2013 2200 kg",
+    "weight": "450 \u2013 550 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Black/Grey-Black",
+    "desc": "Dairy buffalo breed developed from Murrah and Surti cross. Known for its long lactation period and high yield.",
+    "image": null,
+    "species": "Buffalo",
+    "mainType": "Milch"
+  },
+  {
+    "id": "murrah",
+    "name": "Murrah",
+    "origin": "Haryana",
+    "state": "Haryana, Punjab",
+    "traits": [
+      "Black Gold",
+      "Highest Yield",
+      "Buffalo"
+    ],
+    "status": "Stable",
+    "milkYield": "1500 \u2013 3000 kg",
+    "weight": "500 \u2013 700 kg",
+    "height": "135 \u2013 145 cm",
+    "coat": "Jet Black",
+    "desc": "India's best-known dairy buffalo breed. Known as 'Black Gold' for its exceptional milk and fat production.",
+    "image": null,
+    "species": "Buffalo",
+    "mainType": "Milch"
+  },
+  {
+    "id": "nili_ravi",
+    "name": "Nili-Ravi",
+    "origin": "Punjab region",
+    "state": "Punjab",
+    "traits": [
+      "Five White Markings",
+      "High Yield",
+      "Buffalo"
+    ],
+    "status": "Stable",
+    "milkYield": "1500 \u2013 2500 kg",
+    "weight": "450 \u2013 650 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Black with white markings",
+    "desc": "High-yield dairy buffalo. Distinguished by white markings on forehead, legs, and tail tip (Panj Kalyan).",
+    "image": null,
+    "species": "Buffalo",
+    "mainType": "Milch"
+  },
+  {
+    "id": "pandharpuri",
+    "name": "Pandharpuri",
+    "origin": "Maharashtra",
+    "state": "Maharashtra",
+    "traits": [
+      "Long Horns",
+      "Dairy Variant",
+      "Buffalo"
+    ],
+    "status": "Stable",
+    "milkYield": "1200 \u2013 1800 kg",
+    "weight": "400 \u2013 500 kg",
+    "height": "125 \u2013 135 cm",
+    "coat": "Black",
+    "desc": "Regional buffalo breed of southern Maharashtra. Famous for its long blade-shaped horns and good milk potential.",
+    "image": null,
+    "species": "Buffalo",
+    "mainType": "Milch"
+  },
+  {
+    "id": "surti",
+    "name": "Surti",
+    "origin": "Gujarat",
+    "state": "Gujarat",
+    "traits": [
+      "Sickle Horns",
+      "Moderate Yield",
+      "Buffalo"
+    ],
+    "status": "Stable",
+    "milkYield": "1200 \u2013 1600 kg",
+    "weight": "350 \u2013 500 kg",
+    "height": "120 \u2013 130 cm",
+    "coat": "Rusty Black/Brown",
+    "desc": "Medium-sized dairy buffalo breed. Notable for its flat and sickle-shaped horns, providing good milk fat.",
+    "image": null,
+    "species": "Buffalo",
+    "mainType": "Milch"
+  },
+  {
+    "id": "ayrshire",
+    "name": "Ayrshire",
+    "origin": "Scotland (Exotic)",
+    "state": "Worldwide",
+    "traits": [
+      "High Milk Yield",
+      "Hardiness",
+      "Dairy"
+    ],
+    "status": "Stable",
+    "milkYield": "5,000 \u2013 6,000 kg",
+    "weight": "450 \u2013 600 kg",
+    "height": "130 \u2013 140 cm",
+    "coat": "Red and white",
+    "desc": "Ayrshire cattle are a dairy breed from Scotland. They are known for their hardiness and high-quality milk.",
+    "image": "/breeds/Ayrshire.jpg",
+    "species": "Cattle",
+    "mainType": "Milch"
+  }
+]

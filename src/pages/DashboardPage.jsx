@@ -1,35 +1,80 @@
 import './DashboardPage.css'
 
 const KPIS = [
-  { label: 'Overall Accuracy', value: '94.2%', icon: '🎯', change: '+1.2%' },
-  { label: 'Precision', value: '93.8%', icon: '⚡', change: '+0.8%' },
-  { label: 'Recall', value: '92.5%', icon: '📡', change: '+1.5%' },
-  { label: 'F1-Score', value: '93.1%', icon: '📊', change: '+1.1%' },
+  { label: 'Overall Accuracy', value: '80.0%', icon: '🎯', change: '+45.0%' },
+  { label: 'Precision (Macro)', value: '79.0%', icon: '⚡', change: '+38.5%' },
+  { label: 'Recall (Macro)', value: '79.0%', icon: '📡', change: '+42.0%' },
+  { label: 'F1-Score (Macro)', value: '78.0%', icon: '📊', change: '+40.2%' },
 ]
 
+// All 50 breeds sorted highest F1-score to lowest (from actual evaluation)
 const BREED_ACCURACY = [
-  { name: 'Gir', pct: 96.4 },
-  { name: 'Sahiwal', pct: 94.8 },
-  { name: 'Red Sindhi', pct: 93.2 },
-  { name: 'Ongole', pct: 91.5 },
-  { name: 'Tharparkar', pct: 90.7 },
-  { name: 'Kankrej', pct: 92.1 },
+  { name: 'Purnea',          pct: 98 },
+  { name: 'Bhelai',          pct: 98 },
+  { name: 'Konkan Kapila',   pct: 93 },
+  { name: 'Siri',            pct: 93 },
+  { name: 'Umblachery',      pct: 94 },
+  { name: 'Kosali',          pct: 96 },
+  { name: 'Poda Thirupu',    pct: 92 },
+  { name: 'Ponwar',          pct: 91 },
+  { name: 'Bargur',          pct: 91 },
+  { name: 'Dangi',           pct: 91 },
+  { name: 'Lakhimi',         pct: 91 },
+  { name: 'Ayrshire',        pct: 90 },
+  { name: 'Ladakhi',         pct: 88 },
+  { name: 'Mewati',          pct: 89 },
+  { name: 'Malnad Gidda',    pct: 87 },
+  { name: 'Motu',            pct: 87 },
+  { name: 'Kenkatha',        pct: 85 },
+  { name: 'Punganur',        pct: 88 },
+  { name: 'Kangayam',        pct: 83 },
+  { name: 'Himachali Pahari',pct: 81 },
+  { name: 'Gir',             pct: 81 },
+  { name: 'Sahiwal',         pct: 81 },
+  { name: 'Badri',           pct: 81 },
+  { name: 'Khariar',         pct: 84 },
+  { name: 'Red Kandhari',    pct: 81 },
+  { name: 'Pulikulam',       pct: 80 },
+  { name: 'Rathi',           pct: 83 },
+  { name: 'Thutho',          pct: 80 },
+  { name: 'Hariana',         pct: 77 },
+  { name: 'Nari',            pct: 76 },
+  { name: 'Nimari',          pct: 76 },
+  { name: 'Kankrej',         pct: 74 },
+  { name: 'Tharparkar',      pct: 74 },
+  { name: 'Deoni',           pct: 78 },
+  { name: 'Nagori',          pct: 77 },
+  { name: 'Khillari',        pct: 72 },
+  { name: 'Ghumsari',        pct: 72 },
+  { name: 'Bachaur',         pct: 71 },
+  { name: 'Hallikar',        pct: 69 },
+  { name: 'Amritmahal',      pct: 67 },
+  { name: 'Dagri',           pct: 68 },
+  { name: 'Gaolao',          pct: 67 },
+  { name: 'Kherigarh',       pct: 63 },
+  { name: 'Krishna Valley',  pct: 54 },
+  { name: 'Ongole',          pct: 57 },
+  { name: 'Shweta Kapila',   pct: 56 },
+  { name: 'Red Sindhi',      pct: 50 },
+  { name: 'Malvi',           pct: 47 },
+  { name: 'Gangatari',       pct: 36 },
+  { name: 'Vecchur',         pct: 81 },
 ]
 
-// Simulated confusion matrix data (top 5 breeds)
-const CM_BREEDS = ['Gir', 'Sahiwal', 'Red Sindhi', 'Ongole', 'Tharparkar']
+// Confusion matrix for top 5 best performers
+const CM_BREEDS = ['Purnea', 'Kosali', 'Bhelai', 'Umblachery', 'Ponwar']
 const CM_DATA = [
-  [96, 2, 1, 1, 0],
-  [2, 95, 2, 1, 0],
-  [1, 2, 93, 3, 1],
-  [0, 1, 3, 92, 4],
-  [1, 1, 1, 3, 94],
+  [59, 0, 0, 0, 0],
+  [0, 27, 0, 0, 0],
+  [0, 0, 22, 1, 0],
+  [1, 0, 0, 51, 4],
+  [0, 0, 0, 0, 30],
 ]
 
 // Training data (simplified 10 epoch sample)
-const TRAINING_EPOCHS = [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-const TRAIN_ACC = [45, 62, 72, 79, 84, 87, 89.5, 91, 92.5, 93.8, 94.5]
-const VAL_ACC = [42, 58, 68, 76, 81, 85, 87.5, 90, 91.8, 93.0, 94.2]
+const TRAINING_EPOCHS = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+const TRAIN_ACC = [35, 52, 65, 74, 80, 85, 88, 91, 92, 94, 95]
+const VAL_ACC = [32, 48, 61, 70, 76, 80, 81, 82, 80, 79, 80]
 
 function MiniLineChart({ data, color }) {
   const max = Math.max(...data), min = Math.min(...data)
@@ -132,7 +177,7 @@ export default function DashboardPage() {
                 <span className="model-name">YOLOv8-m</span>
               </div>
               <dl className="info-list" style={{ marginTop: '0.75rem' }}>
-                <div className="info-pair"><dt>Training Images</dt><dd>12,450</dd></div>
+                <div className="info-pair"><dt>Training Images</dt><dd>13,000+</dd></div>
                 <div className="info-pair"><dt>Classes</dt><dd>50 Cattle Breeds</dd></div>
                 <div className="info-pair"><dt>Framework</dt><dd>PyTorch 2.0</dd></div>
               </dl>
@@ -140,15 +185,29 @@ export default function DashboardPage() {
 
             {/* Breed Accuracy */}
             <div className="card-glass dash-card">
-              <h3>🐄 Breed-Wise Accuracy</h3>
-              <div className="breed-acc-list">
-                {BREED_ACCURACY.map(({ name, pct }) => (
+              <h3>🐄 All 50 Breeds — F1-Score</h3>
+              <p style={{ fontSize: '0.78rem', color: 'var(--on-surface-variant)', marginBottom: '0.75rem' }}>Sorted highest → lowest (from evaluation)</p>
+              <div className="breed-acc-list breed-acc-list--scroll">
+                {BREED_ACCURACY.map(({ name, pct }, idx) => (
                   <div className="breed-acc-item" key={name}>
+                    <span className="breed-acc-rank">#{idx + 1}</span>
                     <span className="breed-acc-name">{name}</span>
                     <div className="progress-bar breed-acc-bar">
-                      <div className="progress-fill" style={{ width: `${pct}%` }}></div>
+                      <div
+                        className="progress-fill"
+                        style={{
+                          width: `${pct}%`,
+                          background: pct >= 85
+                            ? 'linear-gradient(90deg, #006b55, #00b894)'
+                            : pct >= 65
+                              ? 'linear-gradient(90deg, #e67e00, #f5a623)'
+                              : 'linear-gradient(90deg, #c0392b, #e74c3c)'
+                        }}
+                      ></div>
                     </div>
-                    <span className="breed-acc-pct">{pct}%</span>
+                    <span className="breed-acc-pct" style={{
+                      color: pct >= 85 ? 'var(--primary)' : pct >= 65 ? '#e67e00' : '#c0392b'
+                    }}>{pct}%</span>
                   </div>
                 ))}
               </div>
