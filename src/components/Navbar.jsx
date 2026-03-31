@@ -2,10 +2,10 @@ import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
 const NAV_ITEMS = [
-  { to: '/',          label: 'Home',      icon: '🏠' },
-  { to: '/upload',    label: 'Classify',  icon: '📤' },
-  { to: '/breeds',    label: 'Breeds',    icon: '📚' },
-  { to: '/dashboard', label: 'Dashboard', icon: '📈' },
+  { to: '/',          label: 'Home'      },
+  { to: '/upload',    label: 'Classify'  },
+  { to: '/breeds',    label: 'Breeds'    },
+  { to: '/dashboard', label: 'Dashboard' },
 ]
 
 export default function Navbar() {
@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="nav-inner">
         {/* Logo */}
         <NavLink to="/" className="nav-logo">
-          <div className="nav-logo-icon">🐄</div>
+          <img src="/logo.png" alt="CattleAI Logo" className="nav-logo-img" />
           <div>
             <span className="nav-logo-title">CattleAI</span>
             <span className="nav-logo-sub">Breed Classifier</span>
@@ -32,7 +32,6 @@ export default function Navbar() {
                   `nav-link ${isActive ? 'nav-link--active' : ''}`
                 }
               >
-                <span className="nav-link-icon">{icon}</span>
                 {label}
               </NavLink>
             </li>
