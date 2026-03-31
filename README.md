@@ -344,11 +344,6 @@ Key principles:
 - [x] Frontend ↔ Backend integration
 - [x] Grad-CAM heatmap generation
 
-### 🔄 Phase 4 — Accuracy Improvement (Ongoing)
-- [ ] Collect more images for 🔴 low-accuracy breeds (Gangatari, Malvi, Red Sindhi)
-- [ ] Push accuracy target: **85%+**
-- [ ] Cloud deployment (AWS / GCP / Render)
-
 ---
 
 ## 📄 License
