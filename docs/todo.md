@@ -18,9 +18,9 @@ This project is divided into 3 major parts:
 
 ## 🔹 Setup
 
-* [ ] Initialize frontend project (React / HTML-CSS-JS)
-* [ ] Setup folder structure (components, pages, services)
-* [ ] Install required libraries (Axios, UI framework)
+* [x] Initialize frontend project (React / HTML-CSS-JS)
+* [x] Setup folder structure (components, pages, services)
+* [x] Install required libraries (Axios, UI framework)
 
 ---
 
@@ -39,7 +39,7 @@ This project is divided into 3 major parts:
 
 ### 📥 Download Stitch Assets
 
-* [ ] Use `curl` or browser to download assets
+* [x] Use `curl` or browser to download assets
 
 Example:
 
@@ -48,9 +48,9 @@ curl -L <stitch_image_url> -o image.png
 curl -L <stitch_code_url> -o code.zip
 ```
 
-* [ ] Extract UI code and assets
-* [ ] Integrate into frontend project
-* [ ] Refactor components into reusable structure
+* [x] Extract UI code and assets
+* [x] Integrate into frontend project
+* [x] Refactor components into reusable structure
 
 ---
 
@@ -96,50 +96,50 @@ Design:
 
 ### 🏠 Home Page
 
-* [ ] Add project title and description
-* [ ] Add system overview
-* [ ] Add “Upload Image” CTA button
+* [x] Add project title and description
+* [x] Add system overview
+* [x] Add “Upload Image” CTA button
 
 ---
 
 ### 📤 Upload & Prediction Page
 
-* [ ] Drag-and-drop image upload
-* [ ] Image preview
-* [ ] “Predict Breed” button
-* [ ] Loading spinner
+* [x] Drag-and-drop image upload
+* [x] Image preview
+* [x] “Predict Breed” button
+* [x] Loading spinner
 
 ---
 
 ### 📊 Result Page
 
-* [ ] Display predicted breed
-* [ ] Display confidence score
-* [ ] Show YOLO detection output
-* [ ] Show Grad-CAM heatmap
-* [ ] Show original image
+* [x] Display predicted breed
+* [x] Display confidence score
+* [x] Show YOLO detection output
+* [x] Show Grad-CAM heatmap
+* [x] Show original image
 
 ---
 
 ### 📚 Breed Information Page
 
-* [ ] Show breed details
-* [ ] Add breed cards (image + info)
+* [x] Show breed details
+* [x] Add breed cards (image + info)
 
 ---
 
 ### 📈 Dashboard
 
-* [ ] Show accuracy, precision, recall
-* [ ] Add confusion matrix
-* [ ] Add training graphs
+* [x] Show accuracy, precision, recall
+* [x] Add confusion matrix
+* [x] Add training graphs
 
 ---
 
 ### 📜 History Page
 
-* [ ] Store previous predictions
-* [ ] Display results with timestamps
+* [x] Store previous predictions
+* [x] Display results with timestamps
 
 ---
 
@@ -180,6 +180,7 @@ Design:
 * [ ] Export YOLOv8 dataset
 * [ ] Train YOLOv8 model
 * [ ] Save model (`best.pt`)
+./venv/bin/python3 model_building/train_cnn.py --epochs 50 --subset 1.0
 
 ---
 

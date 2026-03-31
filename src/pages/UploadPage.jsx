@@ -36,24 +36,38 @@ export default function UploadPage() {
 
   const onInputChange = e => handleFile(e.target.files[0])
 
-  const handlePredict = () => {
+  const handlePredict = async () => {
     if (!image) return
     setLoading(true)
-    setProgress(0)
-    const interval = setInterval(() => {
-      setProgress(p => {
-        if (p >= 100) { clearInterval(interval); return 100 }
-        return p + Math.random() * 18
+    setError('')
+    setProgress(10)
+    
+    const formData = new FormData()
+    formData.append('image', image)
+
+    try {
+      const response = await fetch('http://localhost:5000/predict', {
+        method: 'POST',
+        body: formData,
       })
-    }, 200)
-    setTimeout(() => {
-      clearInterval(interval)
+
+      if (!response.ok) {
+        throw new Error('Server error: High load or invalid image.')
+      }
+
+      const data = await response.json()
       setProgress(100)
+      
       setTimeout(() => {
         setLoading(false)
-        navigate('/result', { state: { previewUrl: preview } })
-      }, 400)
-    }, 2200)
+        navigate('/result', { state: { result: data } })
+      }, 500)
+      
+    } catch (err) {
+      console.error(err)
+      setError('Connection failed. Make sure the backend is running.')
+      setLoading(false)
+    }
   }
 
   return (

@@ -1,0 +1,62 @@
+Using device: cuda
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+      Amritmahal       0.69      0.65      0.67        37
+        Ayrshire       0.98      0.84      0.90        50
+          Bargur       1.00      0.83      0.91        29
+           Dangi       0.88      0.94      0.91        32
+           Deoni       1.00      0.64      0.78        25
+             Gir       0.91      0.72      0.81        69
+        Hallikar       0.76      0.64      0.69        39
+         Hariana       0.77      0.77      0.77        31
+Himachali Pahari       0.80      0.82      0.81        44
+        Kangayam       0.76      0.92      0.83        37
+         Kankrej       0.68      0.81      0.74        32
+        Kenkatha       0.88      0.82      0.85        28
+         Khariar       0.82      0.85      0.84        27
+        Khillari       0.78      0.67      0.72        21
+   Konkan Kapila       0.91      0.95      0.93        22
+          Kosali       0.93      1.00      0.96        27
+  Krishna_Valley       0.43      0.73      0.54        22
+         Ladakhi       0.82      0.94      0.88        34
+         Lakhimi       0.91      0.91      0.91        34
+    Malnad_gidda       0.96      0.79      0.87        29
+          Mewati       0.87      0.92      0.89        37
+            Nari       0.62      0.96      0.76        26
+          Nimari       0.69      0.85      0.76        13
+          Ongole       0.52      0.63      0.57        27
+    Poda Thirupu       0.85      1.00      0.92        34
+       Pulikulam       0.76      0.85      0.80        26
+        Punganur       0.85      0.90      0.88        39
+          Purnea       0.95      1.00      0.98        59
+           Rathi       0.83      0.83      0.83        30
+    Red kandhari       0.70      0.97      0.81        31
+      Red_Sindhi       0.65      0.41      0.50        32
+         Sahiwal       0.80      0.83      0.81        82
+   Shweta Kapila       0.59      0.53      0.56        49
+      Tharparkar       0.83      0.67      0.74        43
+      Umblachery       0.98      0.91      0.94        56
+          Vechur       0.73      0.90      0.81        30
+         bachaur       0.69      0.73      0.71        33
+           badri       0.89      0.74      0.81        23
+          bhelai       1.00      0.96      0.98        23
+           dagri       0.61      0.77      0.68        26
+       gangatari       0.33      0.39      0.36        23
+          gaolao       0.80      0.57      0.67        21
+        ghumsari       0.86      0.61      0.72        31
+       kherigarh       0.50      0.87      0.63        23
+           malvi       0.63      0.38      0.47        32
+            motu       0.94      0.81      0.87        37
+          nagori       0.92      0.67      0.77        36
+          ponwar       0.94      0.88      0.91        34
+            siri       0.88      1.00      0.93        43
+          thutho       0.85      0.74      0.80        47
+
+        accuracy                           0.80      1715
+       macro avg       0.79      0.79      0.78      1715
+    weighted avg       0.81      0.80      0.79      1715
+
+
+Confusion matrix saved as reports/newmodel_evaluation_cm.png

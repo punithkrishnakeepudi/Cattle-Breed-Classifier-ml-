@@ -2,18 +2,16 @@ import torch
 import torch.nn as nn
 from torchvision import datasets, models, transforms
 from torch.utils.data import DataLoader, Subset
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 from sklearn.model_selection import train_test_split
 import os
 
-import argparse
-
-def evaluate_model(model_path, data_dir, num_classes=50):
+def evaluate_model_and_save_cm(model_name, model_path, data_dir, num_classes=50):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Using device: {device}")
+    print(f"Evaluating model: {model_name} on device: {device}")
 
     # Data transformation
     data_transforms = transforms.Compose([
@@ -50,16 +48,17 @@ def evaluate_model(model_path, data_dir, num_classes=50):
     model = models.resnet50(weights=None)
     num_ftrs = model.fc.in_features
     model.fc = nn.Sequential(
-        nn.BatchNorm1d(num_ftrs),
         nn.Dropout(0.5),
-        nn.Linear(num_ftrs, 512),
-        nn.ReLU(),
-        nn.Dropout(0.3),
-        nn.Linear(512, num_classes)
+        nn.Linear(num_ftrs, num_classes)
     )
     
     # Load weights
-    model.load_state_dict(torch.load(model_path, map_location=device, weights_only=True))
+    try:
+        model.load_state_dict(torch.load(model_path, map_location=device, weights_only=True))
+    except Exception as e:
+        print(f"Failed to load {model_name}: {e}")
+        return 0.0
+
     model = model.to(device)
     model.eval()
 
@@ -75,25 +74,41 @@ def evaluate_model(model_path, data_dir, num_classes=50):
             all_preds.extend(preds.cpu().numpy())
             all_labels.extend(labels.cpu().numpy())
 
-    # Metrics
-    print("\nClassification Report:")
-    report = classification_report(all_labels, all_preds, target_names=class_names, zero_division=0)
-    print(report)
+    accuracy = accuracy_score(all_labels, all_preds)
+    print(f"Accuracy for {model_name}: {accuracy:.4f}")
 
     # Confusion Matrix (Save as image)
     cm = confusion_matrix(all_labels, all_preds)
     plt.figure(figsize=(20, 20))
     sns.heatmap(cm, annot=False, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
-    plt.title('Confusion Matrix')
+    plt.title(f'Confusion Matrix: {model_name}')
     plt.ylabel('Actual')
     plt.xlabel('Predicted')
-    plt.savefig('reports/finetuned_v2_evaluation_cm.png')
-    print("\nConfusion matrix saved as reports/finetuned_v2_evaluation_cm.png")
+    output_img = f'/home/punith/antigravity/hemanth-prj/{model_name}_confusion_matrix.jpg'
+    plt.savefig(output_img, format='jpg')
+    print(f"Confusion matrix saved as {output_img}")
+    plt.close()
+    
+    return accuracy
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Evaluate a trained breed classifier')
-    parser.add_argument('--model',    type=str, default='/home/punith/antigravity/hemanth-prj/models/finetuned_v2.pth')
-    parser.add_argument('--data_dir', type=str, default='/home/punith/antigravity/hemanth-prj/data/cattle')
-    args = parser.parse_args()
-    os.makedirs('reports', exist_ok=True)
-    evaluate_model(args.model, args.data_dir)
+    data_dir = '/home/punith/antigravity/hemanth-prj/data/cattle'
+    models_dir = '/home/punith/antigravity/hemanth-prj/model'
+    model_files = ['cnn_model.pth', 'newmodel.pth']
+    
+    best_model = None
+    best_acc = -1
+    
+    for model_file in model_files:
+        path = os.path.join(models_dir, model_file)
+        model_name = model_file.replace('.pth', '')
+        if os.path.exists(path):
+            acc = evaluate_model_and_save_cm(model_name, path, data_dir)
+            if acc > best_acc:
+                best_acc = acc
+                best_model = model_name
+        else:
+            print(f"Model file {path} not found.")
+            
+    print(f"---")
+    print(f"Best model is {best_model} with accuracy: {best_acc:.4f}")

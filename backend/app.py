@@ -18,7 +18,7 @@ UPLOAD_FOLDER = os.path.join(PARENT_DIR, 'static', 'uploads')
 RESULT_FOLDER = os.path.join(PARENT_DIR, 'static', 'results')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
-MODEL_PATH_CNN = os.path.join(PARENT_DIR, 'models', 'newmodel.pth')
+MODEL_PATH_CNN = os.path.join(PARENT_DIR, 'models', 'finetuned_v2.pth')
 MODEL_PATH_YOLO = os.path.join(PARENT_DIR, 'models', 'best.pt')
 NUM_CLASSES = 50
 
@@ -53,10 +53,14 @@ print("Loading CNN model...")
 def get_cnn_model():
     model = models.resnet50(weights=None)
     num_ftrs = model.fc.in_features
-    # Matching architecture used in scripts/train_cnn.py
+    # Matching architecture used in scripts/finetune_full.py
     model.fc = nn.Sequential(
+        nn.BatchNorm1d(num_ftrs),
         nn.Dropout(0.5),
-        nn.Linear(num_ftrs, NUM_CLASSES)
+        nn.Linear(num_ftrs, 512),
+        nn.ReLU(),
+        nn.Dropout(0.3),
+        nn.Linear(512, NUM_CLASSES)
     )
     model.load_state_dict(torch.load(MODEL_PATH_CNN, map_location=device, weights_only=True))
     model = model.to(device)

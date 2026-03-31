@@ -6,7 +6,6 @@ const NAV_ITEMS = [
   { to: '/upload',    label: 'Classify',  icon: '📤' },
   { to: '/breeds',    label: 'Breeds',    icon: '📚' },
   { to: '/dashboard', label: 'Dashboard', icon: '📈' },
-  { to: '/history',   label: 'History',   icon: '📜' },
 ]
 
 export default function Navbar() {

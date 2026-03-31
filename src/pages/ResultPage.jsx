@@ -1,19 +1,7 @@
 import { useLocation, Link } from 'react-router-dom'
 import './ResultPage.css'
 
-const RESULT_DATA = {
-  breed: 'Gir Cow',
-  confidence: 93.0,
-  origin: 'Gujarat, India',
-  characteristics: 'Large pendulous ears, prominent hump, reddish-brown coat',
-  milkYield: '2,000 – 2,500 kg / lactation',
-  breakdown: [
-    { breed: 'Gir', pct: 93.0 },
-    { breed: 'Sahiwal', pct: 4.5 },
-    { breed: 'Red Sindhi', pct: 2.5 },
-  ],
-  traits: ['Heat Tolerant', 'High Milk Yield', 'Tick Resistant', 'Draft Purpose'],
-}
+import BREEDS_DB from '../data/breeds.json'
 
 function ConfidenceBar({ label, pct, main }) {
   return (
@@ -29,14 +17,35 @@ function ConfidenceBar({ label, pct, main }) {
   )
 }
 
+const getBreedInfo = (name) => {
+  if (!name) return null;
+  // Normalize to lowercase for ID match or try name match
+  const idValue = name.toLowerCase().replace(/ /g, '_');
+  return BREEDS_DB.find(b => b.id === idValue || b.name.toLowerCase() === name.toLowerCase()) 
+         || BREEDS_DB[0]; // fallback
+}
+
+const BASE_URL = 'http://localhost:5000'
+
 export default function ResultPage() {
   const { state } = useLocation()
-  const previewUrl = state?.previewUrl
+  const result = state?.result
+  const breedDetail = getBreedInfo(result?.breed)
+
+  if (!result) {
+    return (
+      <div className="result-page page-wrapper">
+        <div className="container center">
+          <h2>No results found. Please upload an image first.</h2>
+          <Link to="/upload" className="btn btn-primary">Go to Upload</Link>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="result-page page-wrapper">
       <div className="container">
-        {/* Breadcrumb */}
         <nav className="breadcrumb animate-fadeIn">
           <Link to="/">Home</Link>
           <span>›</span>
@@ -47,100 +56,78 @@ export default function ResultPage() {
 
         <div className="result-header animate-fadeInUp">
           <div className="badge badge-success">✅ Analysis Complete</div>
-          <h1>Results Analysis</h1>
+          <h1>{result.breed} — Prediction Analysis</h1>
         </div>
 
         <div className="result-layout animate-fadeInUp delay-1">
-          {/* LEFT — Visualizations */}
+          {/* LEFT Visuals */}
           <div className="result-visuals">
-            {/* Detection Output */}
             <div className="card-glass result-card">
               <h3>🔍 YOLO Detection Output</h3>
               <div className="detection-img-wrapper">
-                {previewUrl
-                  ? <img src={previewUrl} alt="Uploaded cattle" className="detection-img" />
-                  : <div className="detection-placeholder">
-                      <span>🐄</span>
-                      <p>Cattle Detected — 98.2% confidence</p>
-                    </div>
-                }
+                <img src={`${BASE_URL}${result.detected_image}`} alt="Detection" className="detection-img" />
                 <div className="yolo-badge">
-                  Cattle <strong>98.2%</strong>
+                  {result.animal_detected ? 'Cattle detected' : 'No detection (Full img used)'}
                 </div>
-                <div className="yolo-box"></div>
               </div>
             </div>
 
-            {/* Grad-CAM */}
             <div className="card-glass result-card">
               <h3>🌡️ Grad-CAM Explainability</h3>
               <div className="gradcam-wrapper">
-                <div className="gradcam-overlay gradcam-placeholder">
-                  <span className="gradcam-emoji">🌡️</span>
-                  <p className="gradcam-text">Heatmap overlay applied</p>
-                </div>
+                <img src={`${BASE_URL}${result.heatmap}`} alt="Explainability" className="detection-img" />
                 <div className="gradcam-note">
                   <span>🎯</span>
-                  <span>Model prioritized: <strong>Hump Shape</strong> and <strong>Horn Curvature</strong></span>
+                  <span>Heatmap shows the primary visual features influencing the prediction.</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* RIGHT — Classification & Info */}
+          {/* RIGHT Info */}
           <div className="result-info">
-            {/* Top Prediction */}
             <div className="card-glass result-card">
               <h3>🏆 Top Prediction</h3>
               <div className="top-prediction">
-                <span className="breed-name">{RESULT_DATA.breed}</span>
+                <span className="breed-name">{result.breed}</span>
                 <div className="confidence-score-row">
-                  <span className="confidence-pct">{RESULT_DATA.confidence}%</span>
-                  <span className="badge badge-primary">High Confidence</span>
+                  <span className="confidence-pct">{(result.confidence * 100).toFixed(1)}%</span>
+                  <span className="badge badge-primary">Confidence</span>
                 </div>
                 <div className="progress-bar" style={{ marginTop: '0.75rem' }}>
-                  <div className="progress-fill" style={{ width: `${RESULT_DATA.confidence}%` }}></div>
+                  <div className="progress-fill" style={{ width: `${result.confidence * 100}%` }}></div>
                 </div>
               </div>
             </div>
 
-            {/* Breakdown */}
-            <div className="card-glass result-card">
-              <h3>📊 Breed Breakdown</h3>
-              <div className="confidence-list">
-                {RESULT_DATA.breakdown.map((b, i) => (
-                  <ConfidenceBar key={b.breed} label={`${i + 1}. ${b.breed}`} pct={b.pct} main={i === 0} />
-                ))}
+            {/* Quick Info from DB */}
+            {breedDetail && (
+              <div className="card-glass result-card">
+                <h3>📝 Breed Profile</h3>
+                <dl className="info-list">
+                  <div className="info-pair">
+                    <dt>Origin</dt>
+                    <dd>{breedDetail.origin}</dd>
+                  </div>
+                  <div className="info-pair">
+                    <dt>Typical Milk Yield</dt>
+                    <dd>{breedDetail.milkYield}</dd>
+                  </div>
+                  <div className="info-pair" style={{ display: 'block' }}>
+                    <dt>Description</dt>
+                    <dd style={{ marginTop: '0.5rem', lineHeight: '1.5' }}>{breedDetail.desc}</dd>
+                  </div>
+                </dl>
+                <div className="info-traits" style={{ marginTop: '1rem' }}>
+                  {breedDetail.traits.map(t => (
+                    <span key={t} className="badge badge-primary">{t}</span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* Quick Info */}
-            <div className="card-glass result-card">
-              <h3>📝 Quick Info</h3>
-              <dl className="info-list">
-                <div className="info-pair">
-                  <dt>Origin</dt>
-                  <dd>{RESULT_DATA.origin}</dd>
-                </div>
-                <div className="info-pair">
-                  <dt>Characteristics</dt>
-                  <dd>{RESULT_DATA.characteristics}</dd>
-                </div>
-                <div className="info-pair">
-                  <dt>Milk Yield</dt>
-                  <dd>{RESULT_DATA.milkYield}</dd>
-                </div>
-              </dl>
-              <div className="info-traits">
-                {RESULT_DATA.traits.map(t => (
-                  <span key={t} className="badge badge-primary">{t}</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Actions */}
             <div className="result-actions">
-              <button className="btn btn-primary" id="download-result-btn">📄 Download PDF</button>
+              <button className="btn btn-primary" id="download-result-btn" onClick={() => window.print()}>📄 Print Result</button>
               <Link to="/upload" className="btn btn-secondary" id="new-analysis-btn">🔄 New Analysis</Link>
             </div>
           </div>

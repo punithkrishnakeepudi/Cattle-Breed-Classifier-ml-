@@ -40,15 +40,15 @@ The **Cattle Breed Classifier** is a full-stack AI application for identifying a
 
 ## 📊 Model Performance
 
-> Evaluated on ResNet-50 trained with transfer learning, class-weighted sampling, and label smoothing.
+> Evaluated on ResNet-50 (`finetuned_v2.pth`) trained with transfer learning, progressive unfreezing, mixup augmentation, class-weighted sampling, and label smoothing.
 
 | Metric | Score |
 |---|---|
 | **Overall Accuracy** | **80.0%** |
-| Macro Precision | 79% |
+| Macro Precision | 81% |
 | Macro Recall | 79% |
-| Macro F1-Score | 78% |
-| Weighted F1 | 79% |
+| Macro F1-Score | 79% |
+| Weighted F1 | 80% |
 | Total Classes | 50 |
 | Evaluation Samples | 1,715 |
 
@@ -148,6 +148,13 @@ KPI cards (80% Accuracy, Precision, Recall, F1), training/validation accuracy SV
 
 ---
 
+### 🧩 Confusion Matrix
+Visualization of the model's predictions across all 50 breeds, highlighting where similar breeds are being mixed up.
+
+![Confusion Matrix](reports/finetuned_v2_evaluation_cm.png)
+
+---
+
 ### 📜 Prediction History
 Searchable, sortable table of all past predictions with status badges, timestamps, and CSV export.
 
@@ -241,7 +248,7 @@ Backend runs at **http://localhost:5000**
 ```bash
 source venv/bin/activate
 python scripts/evaluate_model.py
-# Generates: reports/newmodel_evaluation_cm.png + classification report
+# Generates: reports/finetuned_v2_evaluation_cm.png + classification report
 ```
 
 ---
@@ -255,15 +262,18 @@ hemanth-prj/
 ├── data/
 │   └── cattle/                # 50 breed folders (~8,500 images)
 ├── models/
-│   ├── newmodel.pth           # Trained ResNet-50 weights
+│   ├── finetuned_v2.pth       # Fine-tuned ResNet-50 weights
+│   ├── newmodel.pth           # Baseline ResNet-50 weights
 │   └── best.pt                # YOLOv8 cattle detector weights
 ├── scripts/
 │   ├── train_cnn.py           # Full training pipeline (ResNet-50)
 │   ├── evaluate_model.py      # Evaluation + confusion matrix
 │   ├── analyze_data.py        # Dataset distribution analysis
-│   └── verify_data.py         # Dataset integrity check
+│   ├── verify_data.py         # Dataset integrity check
+│   ├── finetune_full.py       # Advanced fine-tuning pipeline
+│   └── finetune_weak_breeds.py # Targeting low-performing breeds
 ├── reports/
-│   └── newmodel_evaluation_cm.png  # Confusion matrix output
+│   └── finetuned_v2_evaluation_cm.png  # Confusion matrix output
 ├── public/
 │   ├── breeds/                # Breed reference images (50)
 │   └── screenshots/           # UI preview screenshots
@@ -324,8 +334,8 @@ Key principles:
 - [x] Dataset: 50 Indian cattle breed classes (~8,500 images)
 - [x] Transfer learning with ResNet-50 (ImageNet pre-trained)
 - [x] Class imbalance handling (WeightedRandomSampler + Label Smoothing)
-- [x] Strong data augmentation (RandomResizedCrop, Jitter, RandomErasing)
-- [x] Early stopping + ReduceLROnPlateau scheduler
+- [x] Strong data augmentation (MixUp, RandomResizedCrop, Jitter)
+- [x] Progressive unfreezing and Cosine Annealing LR scheduler
 - [x] **Achieved 80% overall accuracy** (up from 35% baseline)
 - [x] YOLOv8 cattle object detection
 
